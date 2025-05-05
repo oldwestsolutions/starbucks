@@ -11,6 +11,7 @@ import Wallet from './pages/Wallet';
 import Journey from './pages/Journey';
 import LearnMore from './pages/LearnMore';
 import News from './pages/News';
+import Mission from './pages/Mission';
 
 // Create a wrapper component to handle conditional footer rendering
 const AppContent = () => {
@@ -31,6 +32,7 @@ const AppContent = () => {
           <Route path="/journey" element={<Journey />} />
           <Route path="/learn-more" element={<LearnMore />} />
           <Route path="/news" element={<News />} />
+          <Route path="/mission" element={<Mission />} />
         </Routes>
       </main>
       {!hideNavbarFooter && <Footer />}

@@ -61,12 +61,14 @@ const News = () => {
         <div className="max-w-[1200px] mx-auto px-4 py-8">
           {/* Header */}
           <div className="border-b-2 border-black pb-4 mb-8">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-black mb-2">
-              Credit Coffee News
-            </h1>
-            <p className="text-gray-600 text-sm uppercase tracking-wider">
-              Latest updates and insights on debt management and financial wellness
-            </p>
+            <Link to="/" className="block hover:opacity-80 transition-opacity">
+              <h1 className="text-4xl md:text-6xl font-serif font-bold text-black mb-2">
+                Credit Coffee News
+              </h1>
+              <p className="text-gray-600 text-sm uppercase tracking-wider">
+                Latest updates and insights on debt management and financial wellness
+              </p>
+            </Link>
           </div>
 
           {/* Main Grid */}
