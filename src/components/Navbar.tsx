@@ -10,10 +10,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo with Link */}
-          <Link to="/" className="flex items-center space-x-3">
-            <span className="text-2xl font-serif font-bold text-forest-900 tracking-tight">Credit Coffee</span>
-            <div className="h-6 w-px bg-forest-200"></div>
-            <span className="text-sm font-medium text-forest-600 tracking-wide">your daily brew.</span>
+          <Link to="/" className="flex items-center space-x-1 min-w-0">
+            <img src="/images/creditcoffeelogo.png" alt="Credit Coffee Logo" className="h-8 md:h-10 w-auto flex-shrink-0" />
+            <span className="text-xl md:text-2xl font-serif font-bold text-forest-900 tracking-tight truncate">Credit Coffee</span>
+            <div className="h-6 w-px bg-forest-200 hidden sm:block"></div>
+            <span className="text-xs md:text-sm font-medium text-forest-600 tracking-wide hidden sm:block">your daily brew.</span>
           </Link>
 
           {/* Desktop Navigation */}

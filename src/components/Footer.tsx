@@ -13,7 +13,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-white">Credit Coffee</h3>
+            <div className="flex items-center justify-center md:justify-start space-x-1 mb-6">
+              <img src="/images/creditcoffeelogo.png" alt="Credit Coffee Logo" className="h-8 md:h-10 w-auto flex-shrink-0" />
+              <h3 className="text-xl md:text-2xl font-bold text-white font-serif">Credit Coffee</h3>
+            </div>
             <p className="text-forest-100 mb-6">
               Smart micropayments for credit card debt management. Pay less interest, improve your credit score.
             </p>
