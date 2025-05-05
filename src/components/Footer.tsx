@@ -11,13 +11,13 @@ const Footer = () => {
   return (
     <footer className="bg-forest-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
           <div>
             <h3 className="text-2xl font-bold mb-6 text-white">Credit Coffee</h3>
             <p className="text-forest-100 mb-6">
               Smart micropayments for credit card debt management. Pay less interest, improve your credit score.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4">
               <a href="#" className="text-forest-100 hover:text-white">
                 <i className="fab fa-twitter text-2xl"></i>
               </a>
@@ -80,11 +80,11 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-forest-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-forest-100 text-sm">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center text-center md:text-left">
+            <p className="text-forest-100 text-sm mb-4 md:mb-0">
               © 2024 Credit Coffee. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6">
               <a href="#" className="text-forest-100 hover:text-white text-sm">Privacy</a>
               <a href="#" className="text-forest-100 hover:text-white text-sm">Terms</a>
               <a href="#" className="text-forest-100 hover:text-white text-sm">Cookies</a>
