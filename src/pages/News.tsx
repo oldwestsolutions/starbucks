@@ -58,17 +58,20 @@ const News = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <div className="flex-grow">
+        {/* Logo Header (text only) */}
+        <div className="max-w-[1200px] mx-auto px-4 pt-8 pb-4 flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <span className="text-2xl md:text-4xl font-serif font-bold text-black tracking-tight">Credit Coffee</span>
+          </Link>
+          <span className="text-lg md:text-2xl font-serif text-forest-700 ml-2">News</span>
+        </div>
+
         <div className="max-w-[1200px] mx-auto px-4 py-8">
           {/* Header */}
           <div className="border-b-2 border-black pb-4 mb-8">
-            <Link to="/" className="block hover:opacity-80 transition-opacity">
-              <h1 className="text-3xl md:text-6xl font-serif font-bold text-black mb-2">
-                Credit Coffee News
-              </h1>
-              <p className="text-gray-600 text-sm uppercase tracking-wider">
-                Latest updates and insights on debt management and financial wellness
-              </p>
-            </Link>
+            <h2 className="text-lg md:text-xl text-gray-600 uppercase tracking-wider">
+              Latest updates and insights on debt management and financial wellness
+            </h2>
           </div>
 
           {/* Main Grid */}
