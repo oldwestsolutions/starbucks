@@ -47,13 +47,13 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-6 text-white">Resources</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-forest-100 hover:text-white">Help Center</a>
+                <Link to="/help-center" className="text-forest-100 hover:text-white">Help Center</Link>
               </li>
               <li>
-                <a href="#" className="text-forest-100 hover:text-white">Privacy Policy</a>
+                <Link to="/privacy-policy" className="text-forest-100 hover:text-white">Privacy Policy</Link>
               </li>
               <li>
-                <a href="#" className="text-forest-100 hover:text-white">Terms of Service</a>
+                <Link to="/terms" className="text-forest-100 hover:text-white">Terms of Service</Link>
               </li>
             </ul>
           </div>
@@ -85,8 +85,8 @@ const Footer = () => {
               © 2024 Credit Coffee. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-forest-100 hover:text-white text-sm">Privacy</a>
-              <a href="#" className="text-forest-100 hover:text-white text-sm">Terms</a>
+              <Link to="/privacy-policy" className="text-forest-100 hover:text-white text-sm">Privacy</Link>
+              <Link to="/terms" className="text-forest-100 hover:text-white text-sm">Terms</Link>
               <a href="#" className="text-forest-100 hover:text-white text-sm">Cookies</a>
             </div>
           </div>
