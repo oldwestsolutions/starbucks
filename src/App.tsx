@@ -12,10 +12,11 @@ import Wallet from './pages/Wallet';
 const AppContent = () => {
   const location = useLocation();
   const showFooter = location.pathname === '/';
+  const showNavbar = location.pathname !== '/wallet';
 
   return (
     <div className="min-h-screen flex flex-col w-full">
-      <Navbar />
+      {showNavbar && <Navbar />}
       <main className="flex-grow w-full">
         <Routes>
           <Route path="/" element={<Home />} />
