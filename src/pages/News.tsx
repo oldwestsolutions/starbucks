@@ -62,7 +62,7 @@ const News = () => {
           {/* Header */}
           <div className="border-b-2 border-black pb-4 mb-8">
             <Link to="/" className="block hover:opacity-80 transition-opacity">
-              <h1 className="text-4xl md:text-6xl font-serif font-bold text-black mb-2">
+              <h1 className="text-3xl md:text-6xl font-serif font-bold text-black mb-2">
                 Credit Coffee News
               </h1>
               <p className="text-gray-600 text-sm uppercase tracking-wider">
@@ -72,61 +72,66 @@ const News = () => {
           </div>
 
           {/* Main Grid */}
-          <div className="grid grid-cols-12 gap-4">
-            {/* Featured Article - Spans full width */}
+          <div className="grid grid-cols-1 gap-8">
+            {/* Featured Article */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="col-span-12 mb-8"
+              className="w-full"
             >
-              <div className="grid grid-cols-12 gap-4">
-                <div className="col-span-8">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+                <div className="md:col-span-8">
                   <img 
                     src={featuredArticle.image} 
                     alt="Person using a laptop to manage their finances with Credit Coffee's interface"
-                    className="w-full h-[500px] object-cover"
+                    className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
                   />
                 </div>
-                <div className="col-span-4 flex flex-col justify-center">
+                <div className="md:col-span-4 flex flex-col justify-center p-4 md:p-0">
                   <span className="text-xs uppercase tracking-wider text-gray-500 mb-2">{featuredArticle.date}</span>
-                  <h2 className="text-3xl font-serif font-bold text-black mb-4 leading-tight">
+                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-black mb-4 leading-tight">
                     {featuredArticle.title}
                   </h2>
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                     {featuredArticle.excerpt}
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Article Grid - 3 columns */}
-            {articles.map((article, index) => (
-              <motion.article
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="col-span-4"
-              >
-                <div className="border-b border-gray-200 pb-4">
-                  <img 
-                    src={article.image} 
-                    alt={`${article.title} - ${article.category} article`}
-                    className="w-full h-48 object-cover mb-4"
+            {/* Article Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {articles.map((article, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-48 object-cover"
                   />
-                  <span className="text-xs uppercase tracking-wider text-gray-500 block mb-2">{article.date}</span>
-                  <h3 className="text-xl font-serif font-bold text-black mb-2 leading-tight">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm">
-                    {article.excerpt}
-                  </p>
-                </div>
-              </motion.article>
-            ))}
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs uppercase tracking-wider text-gray-500">{article.category}</span>
+                      <span className="text-xs text-gray-500">{article.date}</span>
+                    </div>
+                    <h3 className="text-xl font-serif font-bold text-black mb-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {article.excerpt}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
-          {/* Newsletter Signup */}
+          {/* Newsletter Section */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,11 +146,11 @@ const News = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-black"
+                  className="flex-1 px-4 py-3 border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-black rounded-lg"
                 />
                 <button
                   type="submit"
-                  className="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 transition duration-300"
+                  className="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 transition duration-300 rounded-lg"
                 >
                   Subscribe
                 </button>
@@ -158,11 +163,11 @@ const News = () => {
       {/* Minimal Footer */}
       <footer className="bg-forest-900 text-white py-6">
         <div className="max-w-[1200px] mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <Link to="/" className="text-white hover:text-forest-100 font-serif">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0">
+            <Link to="/" className="text-white hover:text-forest-100 font-serif text-center">
               Credit Coffee
             </Link>
-            <div className="flex space-x-6">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               <Link to="/about" className="text-forest-100 hover:text-white text-sm">About</Link>
               <Link to="/contact" className="text-forest-100 hover:text-white text-sm">Contact</Link>
               <Link to="/learn-more" className="text-forest-100 hover:text-white text-sm">Learn More</Link>
