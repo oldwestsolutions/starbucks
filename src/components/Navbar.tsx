@@ -10,14 +10,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo with Link */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
             <span className="text-2xl font-bold text-forest-900">Credit Coffee</span>
-            <span className="text-forest-500 text-sm">| Your Daily Financial Brew</span>
+            <div className="h-6 w-px bg-forest-200"></div>
+            <span className="text-sm font-medium text-forest-600 tracking-wide">your daily brew.</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center">
-            <Link to="/login" className="bg-forest-500 hover:bg-forest-600 text-white px-6 py-2 rounded-lg transition duration-300">
+            <Link to="/login" className="bg-forest-500 hover:bg-forest-600 text-white px-6 py-2 rounded-lg transition duration-300 font-medium">
               Login
             </Link>
           </div>
