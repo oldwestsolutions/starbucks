@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo with Link */}
           <Link to="/" className="flex items-center space-x-1 min-w-0">
-            <img src={(import.meta.env.BASE_URL || '/') + 'images/creditcoffeelogo.png'} alt="Credit Coffee Logo" className="h-8 md:h-10 w-auto flex-shrink-0" />
+            <img src="/creditcoffeelogo.png" alt="Credit Coffee Logo" className="h-8 md:h-10 w-auto flex-shrink-0" />
             <span className="text-xl md:text-2xl font-serif font-bold text-forest-900 tracking-tight truncate">Credit Coffee</span>
             <div className="h-6 w-px bg-forest-200 hidden sm:block"></div>
             <span className="text-xs md:text-sm font-medium text-forest-600 tracking-wide hidden sm:block">your daily brew.</span>

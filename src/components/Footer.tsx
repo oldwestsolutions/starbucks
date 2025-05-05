@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
           <div>
             <div className="flex items-center justify-center md:justify-start space-x-1 mb-6">
-              <img src={(import.meta.env.BASE_URL || '/') + 'images/creditcoffeelogo.png'} alt="Credit Coffee Logo" className="h-8 md:h-10 w-auto flex-shrink-0" />
+              <img src="/creditcoffeelogo.png" alt="Credit Coffee Logo" className="h-8 md:h-10 w-auto flex-shrink-0" />
               <h3 className="text-xl md:text-2xl font-bold text-white font-serif">Credit Coffee</h3>
             </div>
             <p className="text-forest-100 mb-6">
