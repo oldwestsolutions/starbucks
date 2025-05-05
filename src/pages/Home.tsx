@@ -3,39 +3,103 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-forest-50">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center bg-seattle-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text Content */}
+      <section className="relative min-h-[90vh] flex items-center bg-forest-900 overflow-hidden">
+        {/* Elegant Monogram Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M60 0C26.9 0 0 26.9 0 60s26.9 60 60 60 60-26.9 60-60S93.1 0 60 0zm0 10c27.6 0 50 22.4 50 50s-22.4 50-50 50S10 87.6 10 60 32.4 10 60 10zm0 10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm0 10c16.6 0 30 13.4 30 30S76.6 90 60 90 30 76.6 30 60s13.4-30 30-30zm0 10c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20zm0 10c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '120px 120px'
+          }}></div>
+        </div>
+
+        {/* Secondary Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M40 0c22.1 0 40 17.9 40 40S62.1 80 40 80 0 62.1 0 40 17.9 0 40 0zm0 10c-16.6 0-30 13.4-30 30s13.4 30 30 30 30-13.4 30-30-13.4-30-30-30zm0 10c11 0 20 9 20 20s-9 20-20 20-20-9-20-20 9-20 20-20zm0 10c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '80px 80px'
+          }}></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Right Column - Image */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center md:text-left"
+              className="order-1 md:order-1"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-                Credit Coffee
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-700">
-                Smart micropayments for credit card debt management
-              </p>
-              <Link to="/login" className="btn btn-primary text-lg">
-                Start Managing Your Debt
-              </Link>
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                alt="Coffee Shop"
+                className="rounded-2xl shadow-xl w-full h-[600px] object-cover"
+              />
             </motion.div>
 
-            {/* Right Column - Image */}
+            {/* Left Column - Text Content */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="text-center md:text-left order-2 md:order-2"
+            >
+              <h1 className="text-6xl md:text-7xl font-bold mb-8 text-white">
+                Credit Coffee
+              </h1>
+              <p className="text-2xl md:text-3xl mb-10 text-forest-100">
+                Sip, Save, and Build Credit - One Coffee at a Time
+              </p>
+              <Link to="/login" className="btn bg-forest-500 hover:bg-forest-600 text-white text-xl px-8 py-4">
+                Start Your Journey
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Automated Payments Section */}
+      <section className="py-32 bg-forest-50">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="order-2 md:order-1"
+            >
+              <h2 className="text-5xl font-bold mb-8 text-forest-900">Daily Brew Payments</h2>
+              <p className="text-2xl text-forest-700 mb-10">
+                Like your daily coffee ritual, make debt payments a regular habit. Small, consistent payments help reduce interest and improve your credit score.
+              </p>
+              <ul className="space-y-6 mb-10">
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Schedule your daily coffee-time payments
+                </li>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Customize your payment amounts
+                </li>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Automatic payment processing
+                </li>
+              </ul>
+              <Link to="/login" className="btn bg-forest-500 hover:bg-forest-600 text-white text-xl px-8 py-4">
+                Set Up Daily Payments
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="order-1 md:order-2"
             >
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
-                alt="Financial Management"
+                src="https://images.unsplash.com/photo-1498804103079-a6351b050096"
+                alt="Coffee Shop Interior"
                 className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
               />
             </motion.div>
@@ -43,98 +107,146 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 bg-white">
+      {/* Debt Management Section */}
+      <section className="py-32 bg-white">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose Credit Coffee?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Automated Payments',
-                description: 'Set up automatic micropayments to your credit card debt. Small, frequent payments help reduce interest and improve your credit score.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f',
-              },
-              {
-                name: 'Debt Management',
-                description: 'Track your credit card balances, set payment goals, and monitor your progress. Our system helps you stay on top of your debt reduction journey.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f',
-              },
-              {
-                name: 'Credit Score Boost',
-                description: 'Regular micropayments demonstrate responsible credit management, helping improve your credit score over time.',
-                image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f',
-              },
-            ].map((feature, index) => (
-              <motion.div
-                key={feature.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white rounded-2xl shadow-sm overflow-hidden border border-seattle-100"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={feature.image}
-                    alt={feature.name}
-                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{feature.name}</h3>
-                  <p className="text-gray-700">{feature.description}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb"
+                alt="Coffee Shop Barista"
+                className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h2 className="text-5xl font-bold mb-8 text-forest-900">Barista-Style Management</h2>
+              <p className="text-2xl text-forest-700 mb-10">
+                Let us handle your debt like a skilled barista crafts your perfect cup. Track balances, set goals, and watch your progress brew.
+              </p>
+              <ul className="space-y-6 mb-10">
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Real-time balance tracking
+                </li>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Customizable payment goals
+                </li>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Progress visualization
+                </li>
+              </ul>
+              <Link to="/login" className="btn bg-forest-500 hover:bg-forest-600 text-white text-xl px-8 py-4">
+                Start Managing Debt
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Credit Score Boost Section */}
+      <section className="py-32 bg-forest-50">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="order-2 md:order-1"
+            >
+              <h2 className="text-5xl font-bold mb-8 text-forest-900">Premium Credit Blend</h2>
+              <p className="text-2xl text-forest-700 mb-10">
+                Like a perfectly roasted coffee bean, we help you develop a rich credit profile through consistent micropayments.
+              </p>
+              <ul className="space-y-6 mb-10">
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Credit score monitoring
+                </li>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Payment history tracking
+                </li>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
+                  Credit utilization optimization
+                </li>
+              </ul>
+              <Link to="/login" className="btn bg-forest-500 hover:bg-forest-600 text-white text-xl px-8 py-4">
+                Boost Your Credit Score
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="order-1 md:order-2"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
+                alt="Coffee Beans"
+                className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-seattle-50">
+      <section className="py-32 bg-white">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">How Credit Coffee Works</h2>
-              <p className="text-gray-700 mb-6">
-                Credit Coffee is a revolutionary micropayment system designed to help you manage credit card debt. 
+              <h2 className="text-5xl font-bold mb-8 text-forest-900">How Credit Coffee Works</h2>
+              <p className="text-2xl text-forest-700 mb-10">
+                Like your favorite coffee shop, we make managing debt simple and enjoyable. 
                 Instead of large monthly payments, our system allows you to make small, frequent payments that 
                 reduce interest charges and help you pay off debt faster. Perfect for those looking to improve 
-                their credit score and manage debt more effectively.
+                their credit score while enjoying their daily coffee ritual.
               </p>
-              <ul className="space-y-4 mb-6">
-                <li className="flex items-center text-gray-700">
-                  <span className="text-evergreen-500 mr-2">✓</span>
+              <ul className="space-y-6 mb-10">
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
                   Connect your credit cards securely
                 </li>
-                <li className="flex items-center text-gray-700">
-                  <span className="text-evergreen-500 mr-2">✓</span>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
                   Set up automated micropayments
                 </li>
-                <li className="flex items-center text-gray-700">
-                  <span className="text-evergreen-500 mr-2">✓</span>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
                   Track debt reduction progress
                 </li>
-                <li className="flex items-center text-gray-700">
-                  <span className="text-evergreen-500 mr-2">✓</span>
+                <li className="flex items-center text-xl text-forest-700">
+                  <span className="text-forest-500 mr-3 text-2xl">✓</span>
                   Monitor credit score improvements
                 </li>
               </ul>
-              <div className="bg-white p-4 rounded-lg mb-6 border border-seattle-100">
-                <p className="text-gray-700 text-sm">
-                  <strong>Important:</strong> Credit Coffee is a debt management tool. By using our service, 
+              <div className="bg-forest-50 p-6 rounded-xl mb-10 border border-forest-200">
+                <p className="text-forest-700 text-lg">
+                  <strong>Important:</strong> Credit Coffee is your daily companion for debt management. By using our service, 
                   you agree to make regular micropayments to your connected credit card accounts. This service 
-                  is designed to help you manage and reduce your credit card debt over time.
+                  is designed to help you manage and reduce your credit card debt over time, just like your daily coffee helps you start your day.
                 </p>
               </div>
-              <Link to="/login" className="btn btn-primary">
-                Start Managing Your Debt
+              <Link to="/login" className="btn bg-forest-500 hover:bg-forest-600 text-white text-xl px-8 py-4">
+                Start Your Coffee Journey
               </Link>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
-                alt="Financial management"
-                className="w-full h-[600px] object-cover"
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                alt="Coffee Shop Experience"
+                className="w-full h-[700px] object-cover"
               />
             </div>
           </div>

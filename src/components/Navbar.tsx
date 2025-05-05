@@ -6,17 +6,18 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-seattle-800">Credit Coffee</span>
+        <div className="flex justify-between items-center h-20">
+          {/* Logo with Link */}
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="text-2xl font-bold text-forest-900">Credit Coffee</span>
+            <span className="text-forest-500 text-sm">| Your Daily Financial Brew</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/login" className="btn bg-evergreen-500 hover:bg-evergreen-600 text-white">
+          <div className="hidden md:flex items-center">
+            <Link to="/login" className="bg-forest-500 hover:bg-forest-600 text-white px-6 py-2 rounded-lg transition duration-300">
               Login
             </Link>
           </div>
@@ -25,7 +26,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-seattle-800 hover:text-seattle-600 focus:outline-none"
+              className="text-forest-800 hover:text-forest-600 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -64,7 +65,7 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to="/login"
-                className="block px-3 py-2 rounded-md text-base font-medium text-seattle-800 hover:bg-seattle-50"
+                className="block px-3 py-2 rounded-md text-base font-medium bg-forest-500 text-white hover:bg-forest-600"
                 onClick={() => setIsOpen(false)}
               >
                 Login

@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-seattle-50 text-seattle-800 min-h-screen;
+    @apply bg-forest-50 text-gray-900 min-h-screen w-full;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -24,15 +24,15 @@
   }
   
   .btn-primary {
-    @apply bg-evergreen-500 text-white hover:bg-evergreen-600 shadow-sm hover:shadow-md;
+    @apply bg-forest-500 text-white hover:bg-forest-600 shadow-sm hover:shadow-md;
   }
   
   .btn-secondary {
-    @apply bg-seattle-100 text-seattle-800 hover:bg-seattle-200 shadow-sm hover:shadow-md;
+    @apply bg-forest-100 text-gray-900 hover:bg-forest-200 shadow-sm hover:shadow-md;
   }
   
   .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 
@@ -47,10 +47,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%;
 }
 
 h1 {
