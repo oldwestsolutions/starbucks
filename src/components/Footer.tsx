@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const companyLinks = [
+    { name: "About Us", path: "/about" },
+    { name: "Our Mission", path: "/mission" },
+    { name: "Contact", path: "/contact" },
+    { name: "News", path: "/news" }
+  ];
+
   return (
     <footer className="bg-forest-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -24,29 +31,21 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-white">Quick Links</h4>
+            <h4 className="text-xl font-semibold mb-6 text-white">Company</h4>
             <ul className="space-y-4">
-              <li>
-                <Link to="/" className="text-forest-100 hover:text-white">Home</Link>
-              </li>
-              <li>
-                <Link to="/wallet" className="text-forest-100 hover:text-white">Wallet</Link>
-              </li>
-              <li>
-                <Link to="/login" className="text-forest-100 hover:text-white">Login</Link>
-              </li>
-              <li>
-                <Link to="/signup" className="text-forest-100 hover:text-white">Sign Up</Link>
-              </li>
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path} className="text-forest-100 hover:text-white">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
           <div>
             <h4 className="text-xl font-semibold mb-6 text-white">Resources</h4>
             <ul className="space-y-4">
-              <li>
-                <a href="#" className="text-forest-100 hover:text-white">Blog</a>
-              </li>
               <li>
                 <a href="#" className="text-forest-100 hover:text-white">Help Center</a>
               </li>

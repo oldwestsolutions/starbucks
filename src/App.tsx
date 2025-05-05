@@ -8,17 +8,19 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Wallet from './pages/Wallet';
+import Journey from './pages/Journey';
+import LearnMore from './pages/LearnMore';
+import News from './pages/News';
 
 // Create a wrapper component to handle conditional footer rendering
 const AppContent = () => {
   const location = useLocation();
-  const showFooter = location.pathname === '/';
-  const showNavbar = location.pathname !== '/wallet';
+  const hideNavbarFooter = ['/login', '/wallet', '/journey', '/news'].includes(location.pathname);
 
   return (
-    <div className="min-h-screen flex flex-col w-full">
-      {showNavbar && <Navbar />}
-      <main className="flex-grow w-full">
+    <div className="flex flex-col min-h-screen">
+      {!hideNavbarFooter && <Navbar />}
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
@@ -26,9 +28,12 @@ const AppContent = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/wallet" element={<Wallet />} />
+          <Route path="/journey" element={<Journey />} />
+          <Route path="/learn-more" element={<LearnMore />} />
+          <Route path="/news" element={<News />} />
         </Routes>
       </main>
-      {showFooter && <Footer />}
+      {!hideNavbarFooter && <Footer />}
       <Analytics />
     </div>
   );

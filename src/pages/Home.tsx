@@ -5,55 +5,93 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-forest-50">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-forest-900 overflow-hidden">
-        {/* Elegant Monogram Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M60 0C26.9 0 0 26.9 0 60s26.9 60 60 60 60-26.9 60-60S93.1 0 60 0zm0 10c27.6 0 50 22.4 50 50s-22.4 50-50 50S10 87.6 10 60 32.4 10 60 10zm0 10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm0 10c16.6 0 30 13.4 30 30S76.6 90 60 90 30 76.6 30 60s13.4-30 30-30zm0 10c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20zm0 10c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '120px 120px'
-          }}></div>
-        </div>
-
-        {/* Secondary Pattern Overlay */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M40 0c22.1 0 40 17.9 40 40S62.1 80 40 80 0 62.1 0 40 17.9 0 40 0zm0 10c-16.6 0-30 13.4-30 30s13.4 30 30 30 30-13.4 30-30-13.4-30-30-30zm0 10c11 0 20 9 20 20s-9 20-20 20-20-9-20-20 9-20 20-20zm0 10c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '80px 80px'
-          }}></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            {/* Right Column - Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="order-1 md:order-1"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
-                alt="Coffee Shop"
-                className="rounded-2xl shadow-xl w-full h-[600px] object-cover"
-              />
-            </motion.div>
-
+      <section className="bg-forest-900 overflow-hidden relative min-h-[70vh] flex items-center">
+        {/* Monogram Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYwIDMwQzQ1IDMwIDMwIDQ1IDMwIDYwQzMwIDc1IDQ1IDkwIDYwIDkwQzc1IDkwIDkwIDc1IDkwIDYwQzkwIDQ1IDc1IDMwIDYwIDMwWk02MCA4MEM1MCA4MCA0MCA3MCA0MCA2MEM0MCA1MCA1MCA0MCA2MCA0MEM3MCA0MCA4MCA1MCA4MCA2MEM4MCA3MCA3MCA4MCA2MCA4MFoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=')] bg-repeat"></div>
+        <div className="absolute inset-0 opacity-[0.02] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDAgMjBDMzAgMjAgMjAgMzAgMjAgNDBDMjAgNTAgMzAgNjAgNDAgNjBDNTAgNjAgNjAgNTAgNjAgNDBDNjAgMzAgNTAgMjAgNDAgMjBaTTQwIDUwQzM1IDUwIDMwIDQ1IDMwIDQwQzMwIDM1IDM1IDMwIDQwIDMwQzQ1IDMwIDUwIDM1IDUwIDQwQzUwIDQ1IDQ1IDUwIDQwIDUwWiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==')] bg-repeat"></div>
+        
+        <div className="container mx-auto px-4 py-24 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
+            <div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+                Sip, Save, and Build Credit
+                <br />
+                <span className="text-forest-200">One Coffee at a Time</span>
+              </h1>
+              <p className="text-xl text-forest-100 mb-10 max-w-2xl">
+                Transform your daily coffee ritual into a powerful tool for building credit and managing debt.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 mb-12">
+                <Link
+                  to="/journey"
+                  className="bg-forest-500 hover:bg-forest-600 text-white px-10 py-4 rounded-lg transition duration-300 font-medium text-lg"
+                >
+                  Start Your Journey
+                </Link>
+                <Link
+                  to="/learn-more"
+                  className="bg-white hover:bg-forest-50 text-forest-900 px-10 py-4 rounded-lg transition duration-300 font-medium text-lg"
+                >
+                  Learn More
+                </Link>
+              </div>
+              {/* Quick Links */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <Link 
+                  to="/about" 
+                  className="group bg-forest-800/50 hover:bg-forest-800 p-4 rounded-lg transition duration-300"
+                >
+                  <div className="flex items-center text-forest-200 group-hover:text-white">
+                    <span className="text-forest-500 group-hover:text-forest-400 mr-2">→</span>
+                    <div>
+                      <div className="font-medium">About Us</div>
+                      <div className="text-sm text-forest-400">Learn more</div>
+                    </div>
+                  </div>
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="group bg-forest-800/50 hover:bg-forest-800 p-4 rounded-lg transition duration-300"
+                >
+                  <div className="flex items-center text-forest-200 group-hover:text-white">
+                    <span className="text-forest-500 group-hover:text-forest-400 mr-2">→</span>
+                    <div>
+                      <div className="font-medium">Contact</div>
+                      <div className="text-sm text-forest-400">Get in touch</div>
+                    </div>
+                  </div>
+                </Link>
+                <Link 
+                  to="/menu" 
+                  className="group bg-forest-800/50 hover:bg-forest-800 p-4 rounded-lg transition duration-300"
+                >
+                  <div className="flex items-center text-forest-200 group-hover:text-white">
+                    <span className="text-forest-500 group-hover:text-forest-400 mr-2">→</span>
+                    <div>
+                      <div className="font-medium">Services</div>
+                      <div className="text-sm text-forest-400">View options</div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column - Image */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center md:text-left order-2 md:order-2"
+              transition={{ duration: 0.8 }}
+              className="hidden lg:block"
             >
-              <h1 className="text-6xl md:text-7xl font-bold mb-8 text-white">
-                Credit Coffee
-              </h1>
-              <p className="text-2xl md:text-3xl mb-10 text-forest-100">
-                Sip, Save, and Build Credit - One Coffee at a Time
-              </p>
-              <Link to="/login" className="btn bg-forest-500 hover:bg-forest-600 text-white text-xl px-8 py-4">
-                Start Your Journey
-              </Link>
+              <div className="relative">
+                <div className="absolute inset-0 bg-forest-500/20 rounded-2xl transform rotate-3"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                  alt="Coffee Shop"
+                  className="rounded-2xl shadow-xl w-full h-[500px] object-cover relative z-10"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
